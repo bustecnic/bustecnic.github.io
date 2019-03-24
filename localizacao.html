@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<title>BUS TECNIC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-large w3-light-grey">
+    <div class="w3-col s3">
+      <a href="./index.html" class="w3-button w3-block">Início</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="./empresa.html" class="w3-button w3-block">Empresa</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="./servico.html" class="w3-button w3-block">Serviços</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="#" class="w3-button w3-block">Localização</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="./contato.html" class="w3-button w3-block">Contato</a>
+    </div>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+
+  <!-- Grid -->
+  <div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Localização</span>
+    </div>
+
+    <div class="w3-center w3-margin-bottom">
+      <div class="w3-card-4">        
+        <div class="w3-container">
+          <h3>BUS TECNIC</h3>          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.898442513469!2d-42.79236128523617!3d-5.120064696284206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMDcnMTIuMiJTIDQywrA0NycyNC42Ilc!5e0!3m2!1sen!2sbr!4v1553442088152" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>          
+        </div>
+      </div>
+    </div>    
+  </div>
+
+<!-- Footer -->
+
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center">  
+  <div class="w3-xlarge w3-section">
+    <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+  </div>
+  <p><p><i class="fa fa-whatsapp" style="font-size:24px;color:green"></i>  (86) 9 9976-5498</p>
+</footer>
+
+
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</body>
+</html>
